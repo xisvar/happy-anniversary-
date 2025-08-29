@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 97%;
+    --foreground: 20 8% 20%;
+
+    --card: 30 33% 99%;
+    --card-foreground: 20 8% 20%;
+
+    --popover: 30 33% 99%;
+    --popover-foreground: 20 8% 20%;
+
+    --primary: 348 36% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 65% 80%;
+    --secondary-foreground: 20 8% 20%;
+
+    --muted: 30 10% 92%;
+    --muted-foreground: 20 5% 45%;
+
+    --accent: 42 80% 76%;
+    --accent-foreground: 20 8% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 20 5% 88%;
+    --input: 20 5% 88%;
+    --ring: 348 36% 75%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image: 
+      radial-gradient(circle at 10% 10%, rgba(248, 240, 229, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
+      radial-gradient(circle at 90% 90%, rgba(234, 202, 203, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
+    background-attachment: fixed;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-frame {
+  position: relative;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transform: rotate(var(--rotate, 0deg));
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.photo-frame:hover {
+  transform: rotate(var(--rotate, 0deg)) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.staggered-fade-in > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.staggered-fade-in > *:nth-child(1) { animation: fade-in 0.5s ease-out 0.1s forwards; }
+.staggered-fade-in > *:nth-child(2) { animation: fade-in 0.5s ease-out 0.2s forwards; }
+.staggered-fade-in > *:nth-child(3) { animation: fade-in 0.5s ease-out 0.3s forwards; }
+.staggered-fade-in > *:nth-child(4) { animation: fade-in 0.5s ease-out 0.4s forwards; }
+.staggered-fade-in > *:nth-child(5) { animation: fade-in 0.5s ease-out 0.5s forwards; }
+.staggered-fade-in > *:nth-child(6) { animation: fade-in 0.5s ease-out 0.6s forwards; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ribbon {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  width: 30px;
+  height: 100px;
+  background: var(--ribbon-color, #EACACB);
+  transform-origin: 50% 0;
+  transform: translateZ(0) rotate(var(--ribbon-rotate, 25deg));
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ribbon:after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 30px;
+  height: 20px;
+  background: var(--ribbon-color, #EACACB);
+  transform: translateZ(0) skewX(45deg);
+}
