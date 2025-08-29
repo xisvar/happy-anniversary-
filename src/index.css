@@ -51,6 +51,12 @@
   }
 }
 
+.scale{
+  transform: scale(0.75);
+  transform-origin: top center;
+  margin: 0 auto;
+}
+
 .glass-card {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);

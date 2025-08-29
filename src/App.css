@@ -12,6 +12,12 @@
   transition: filter 300ms;
 }
 
+.scale{
+  transform: 'scale(0.75)';
+  transform-origin: top center;
+  margin: '0 auto';
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

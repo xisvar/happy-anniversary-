@@ -12,18 +12,11 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hidden autoplay audio */}
-      <audio autoPlay loop style={{ display: 'none' }}>
+      <audio preload="auto" autoPlay loop style={{ display: 'none' }}>
         <source src="/song.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-      <div >
-        <main
-          style={{
-        transform: 'scale(0.75)',
-        transformOrigin: 'top center',
-        margin: '0 auto',
-      }}
-      >
+        <main>
           <HeroSection />
           <motion.div
             initial={{ opacity: 0 }}
@@ -59,7 +52,6 @@ const Index: React.FC = () => {
         </footer>
         <BirthdayCard />
       </div>
-    </div>
   );
 };
 

@@ -29,7 +29,7 @@ const photos = [
   },
   {
     url: "8.jpg",
-    alt: "Joyful moments",
+    alt: "Joyful M",
     rotate: "-1deg",
   },
 ];
