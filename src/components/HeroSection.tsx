@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       <p className="text-sm md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-        Today we honor fifty years of love, faith, and family. A half-century of choosing each other, of building a home, of raising children and grandchildren, of creating a legacy that holds us all together. What you’ve built is more than a marriage—it’s the roots and the foundation of who we are. 
+        Today we honor fifty years of love, faith, and family. A half-century of choosing each other, of building a home, of raising children and grandchildren, of creating a legacy that holds us all together. What you’ve built is more than a marriage, it’s the roots and the foundation of who we are. 
       </p>
 
         
