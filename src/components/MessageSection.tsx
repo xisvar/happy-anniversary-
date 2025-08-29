@@ -7,8 +7,8 @@ const MessageSection: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { scrollYProgress } = useScroll();
   
-  const opacity = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
-  const y = useTransform(scrollYProgress, [0.5, 0.6], [50, 0]);
+  const opacity = useTransform(scrollYProgress, [0.2, 1], [0, 1]);
+  const y = useTransform(scrollYProgress, [0.2, 0.3], [50, 0]);
 
   useEffect(() => {
     setMounted(true);

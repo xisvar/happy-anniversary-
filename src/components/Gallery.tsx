@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 const photos = [
   {
     url: "/1.jpg",
-    alt: " celebration",
+    alt: "Wonderful",
     rotate: "-3deg",
   },
   {
     url: "/5.jpg",
-    alt: "Family gathering",
+    alt: "Lovely",
     rotate: "-3deg",
   },
   {
     url: "/6.jpg",
-    alt: "Beautiful flowers",
+    alt: "Beautiful",
     rotate: "1deg",
   },
   {
@@ -29,7 +29,7 @@ const photos = [
   },
   {
     url: "8.jpg",
-    alt: " cake",
+    alt: "Joyful moments",
     rotate: "-1deg",
   },
 ];
