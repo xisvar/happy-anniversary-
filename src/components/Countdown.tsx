@@ -93,7 +93,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           {targetDate 
             ? "It's going to be amazing! Get ready to celebrate this special occasion." 
-            : "Today is all about celebrating Aunty Ify! Let's make every moment count."}
+            : "Today is all about celebrating Grandma and Grandpa! Let's make every moment count."}
         </p>
       </div>
     </section>
